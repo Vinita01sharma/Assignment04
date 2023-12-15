@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            height: 350px;
+            width: 350px;
+            text-align: center;
+            padding: 40px;
+            margin: 40px auto;
+            border: 3px solid black;
+        }
+
+        .butn {
+            display: flex;
+            align-items: center;
+            gap:40px;
+
+
+        }
+
+        .butn .btn button {
+            margin-top: 40px;
+            height: 50px;
+            width: 50px;
+            font-weight: 700;
+
+        }
+
+        #a{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <h2>Maths Oprations </h2>
+        <label for="">Enter 1st Number :</label>
+        <input type="text" name="" id="n1">
+        <br><br>
+        <label for="">Enter 2nd Number :</label>
+        <input type="text" name="" id="n2">
+        <div class="butn">
+            <div class="btn">
+                <button onclick=" addtion()">+</button>
+                <button onclick=" substraction()">-</button>
+                <button onclick=" Multiplication()" >*</button>
+                  <br>
+                <button onclick="Divison()">/</button>
+                <button onclick="Modules()">%</button>
+            </div>
+            <div class="Answer">
+                <span>Answer is :</span><span id="a"></span>
+            </div>
+        </div>
+    </form>
+    <script>
+
+        function addtion() {
+            var a = document.getElementById("n1").value
+            var b = document.getElementById("n2").value
+            var result = Number(a) + Number(b)
+            document.getElementById("a").innerHTML = result
+            return false
+        }
+        function substraction() {
+            var a = document.getElementById("n1").value
+            var b = document.getElementById("n2").value
+            var result = Number(a) - Number(b)
+            document.getElementById("a").innerHTML = result
+            return false
+        }
+        function Multiplication() {
+            var a3 = document.getElementById("n1").value
+            var b = document.getElementById("n2").value
+            var result = Number(a) * Number(b)
+            document.getElementById("a").innerHTML = result
+            return false
+        }
+        function Divison() {
+            var a = document.getElementById("n1").value
+            var b = document.getElementById("n2").value
+            var result = Number(a) / Number(b)
+            document.getElementById("a").innerHTML = result
+            return false
+        }
+        function Modules() {
+            var a = document.getElementById("n1").value
+            var b = document.getElementById("n2").value
+            var result = Number(a) % Number(b)
+            document.getElementById("a").innerHTML = result
+            return false
+        }
+    </script>
+</body>
+
+</html>

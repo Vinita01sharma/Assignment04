@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .result {
+            height: 500px;
+            width: 450px;
+            border: 2px solid black;
+            padding: 20px;
+            margin: auto;
+
+        }
+
+        .result h3 {
+            text-align: center;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 15px;
+        }
+
+        .print {
+            width: 70%;
+        }
+
+        .btn {
+            height: 30px;
+            width: 150px;
+            margin-left: 180px;
+        }
+
+        .space {
+            margin-top: 20px;
+            display: flex;
+            gap: 70px;
+        }
+
+        .space #a1,#a2 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div class="result">
+            <h2>Marksheet for Information Technology</h2>
+            <h3>Enter Marks</h3>
+            <table>
+                <div class="print">
+                    <div class="row">
+                        <div class="col">
+
+                            <label for="">1. C Language </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                            <label for="">2. C++ Language </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                            <label for="">3. Database </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                            <label for="">4. HTML </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="4">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                            <label for="">5. CSS </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="5">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                            <label for="">6. php </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                            <label for="">7. Core java </label>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="7">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn" onclick="addtion()"> Result </button>
+                <div class="space">
+                    <div class="answer">
+                        <span>
+                            Total is : <span id="a1"></span>
+                        </span>
+                        <span>
+                            /350
+                        </span>
+                    </div>
+                    <div class="Percentage">
+                        <span>Percentage is : <span id="a2"></span>
+                        </span>
+                        <span>%</span>
+                    </div>
+                </div>
+            </table>
+        </div>
+
+    </form>
+    <script>
+        function addtion() {
+            var a = document.getElementById("1").value
+            var b = document.getElementById("2").value
+            var c = document.getElementById("3").value
+            var d = document.getElementById("4").value
+            var e = document.getElementById("5").value
+            var f = document.getElementById("6").value
+            var g = document.getElementById("7").value
+            var final = Number(a) + Number(b) + Number(c) + Number(d) + Number(e) + Number(f) + Number(g)
+            document.getElementById("a1").innerHTML = final
+            var finall = Number(final / 350) * 100
+            document.getElementById("a2").innerHTML = finall
+            if (a > 50) {
+                alert("above 50 is not valid")
+            }
+            
+            return false
+        }
+
+
+
+    </script>
+</body>
+
+</html>
